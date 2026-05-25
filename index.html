@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>fourthtime</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Flower Animation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at top, #1c1817 0%, #000000 70%);
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.flower{
+  bottom:25px;
+    position:absolute;
+    width:32px;
+    height:32px;
+    animation:sway 4s ease-in-out infinite alternate;
+}
+
+.stem{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:40px;
+    height:256px;
+  background-image: url("https://i.postimg.cc/NMMxQ98c/Untitled464-20260523155439.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    transform:translateX(-50%) scaleY(-50);
+    transform-origin:bottom;
+    animation:growStem 2s ease forwards;
+}
+
+.leaf{
+    position:absolute;
+    width:64px;
+    height:64px;
+    opacity:0;
+    animation:
+        leafAppear 1.2s ease forwards,
+        leafFloat 3s ease-in-out infinite alternate;
+}
+
+.leaf.right{
+  cursor:pointer;
+    bottom:150px;
+    left:4px;
+  background-image: url("https://i.postimg.cc/FRRxhdbX/Untitled464-20260523155351.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+    transform-origin:right center;
+    animation-delay:0.5s;
+}
+
+.leaf.left{
+    bottom:96px;
+    right:13px;
+    transform-origin:left center;
+    animation-delay:1s;
+  background-image: url("https://i.postimg.cc/tTTz9Z38/Untitled464-20260523155250.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+  
+.leaf.middle{
+    bottom:32px;
+    right:-26px;
+    transform-origin:left center;
+    animation-delay:1s;
+  background-image: url("https://i.postimg.cc/MTTYzM0k/Untitled464-20260523155344.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.petal{
+    position:absolute;
+  bottom:688%;
+    width:272%;
+    height:256%;
+  background-image: url("https://i.postimg.cc/B66CJL53/Untitled464-20260523155423.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    opacity:0;
+    animation:
+        petalAppear 5s ease forwards,
+        petalFloat 7s ease-in-out infinite alternate;
+}
+
+@keyframes growStem{
+    from{
+        transform:translateX(-50%) scaleY(0);
+    }
+    to{
+        transform:translateX(-50%) scaleY(1);
+    }
+}
+
+@keyframes bloom{
+    from{
+        transform:translateX(-50%) scale(0);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(-50%) scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes petalAppear{
+    from{
+        opacity:0;
+        scale:0;
+    }
+
+    to{
+        opacity:1;
+        scale:1;
+    }
+}
+
+@keyframes leafAppear{
+    from{
+        opacity:0;
+        transform:scale(0) rotate(-20deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0deg);
+    }
+}
+
+@keyframes sway{
+    from{
+        transform:rotate(-3deg);
+    }
+
+    to{
+        transform:rotate(3deg);
+    }
+}
+
+@keyframes leafFloat{
+    from{
+        translate:0 0;
+    }
+
+    to{
+        translate:0 -8px;
+    }
+}
+
+@keyframes petalFloat{
+    from{
+        translate:0 0;
+    }
+
+    to{
+        translate:0 -5px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="flower">
+
+    <div class="stem"></div>
+    <div class="leaf left"></div>
+    <div class="leaf right"></div>
+    <div class="leaf middle"></div>
+  <div class="petal p1"></div>
+  <div class="flower-head"></div>
+
+  </div>
+    
+<div class="message-box" id="messageBox">
+  <div class="message-content">
+    <h5>HAPPY BDAY</h5>
+    <p style="font-size: 10px;">
+      WHATS GOOD i coded this wankass website in like 3 days cause its all im good at AHAHAHA whatever even though we arent That tight i thought id do smth for you cs youve done a lotta shit for me. i dont talk as often as i want to but its still always easy getting along with you. youre a good friend. tranny. thats all youre getting from me this is bad for my brand dont let your big age get to ur head ok…
+love ren 
+    </p>
+  </div>
+</div>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="https://www.image2url.com/r2/default/audio/1779581981064-55ad52ee-e21e-4d34-87fa-4c45e3120971.mp3" type="audio/mpeg">
+</audio>
+    </div>
+</div>
+
+
+<div class="gallery" id="gallery">
+    <img src="https://i.postimg.cc/MTvwQvsJ/Untitled470-20260524204606.jpg" class="gallery-img">
+    <img src="https://i.postimg.cc/kXH51ydb/Untitled468-20260524200914.jpg" class="gallery-img">
+    <img src="https://i.postimg.cc/7PtyxQc4/Untitled467-20260524171236.jpg" class="gallery-img">
+</div>
+
+<div class="name-signs">
+    <img src="https://i.postimg.cc/jSTYx8PX/Untitled471-20260524212135.png" class="sign up-sign">
+    <img src="https://i.postimg.cc/8zGgpyMR/Untitled471-20260524212138.png" class="sign down-sign">
+
+</div>
+
+<div class="hero"></div>
+
+<div class="overlay-image"></div>
+
+<a 
+   href="https://open.spotify.com/playlist/2bUurMpaHgLxgZmtd2Mj7Z?si=-bxqLQ8QRqerMxg9tvja1g&pt=dd10eb4537663c79e0f20319e6dc0d49&pi=lrOE5RpgSKy5R"
+   target="_blank"
+   class="spotify-card"
+   id="spotifyCard"
+>
+    <img 
+      src="https://i.postimg.cc/pTy7dW8q/Untitled474-20260525033441.png"
+      alt="playlist cover"
+    >
+
+    <div class="spotify-info"></div>
+</a>
+
+<div class="spark-area">
+    <span class="spark s1"></span>
+    <span class="spark s2"></span>
+    <span class="spark s3"></span>
+    <span class="spark s4"></span>
+    <span class="spark s5"></span>
+    <span class="spark s6"></span>
+    <span class="spark s7"></span>
+    <span class="spark s8"></span>
+</div>
+
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

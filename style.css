@@ -1,0 +1,300 @@
+.message-box{
+  z-index:600;
+  animation: none !important;
+    position: fixed;
+    width: 160px;
+    height: 80px;
+    background: rgba(255, 182, 193, 0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    opacity: 0;
+    padding: 5px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.message-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(80%, -250%) scale(1);
+}
+.message-content{
+    width: 100%;
+  height: 100%;
+    overflow-y: auto;
+    color: white;
+    font-family: sans-serif;
+}
+.message-content::-webkit-scrollbar{
+    width: 8px;
+}
+.message-content::-webkit-scrollbar-thumb{
+    background: pink;
+    border-radius: 10px;
+}
+
+
+
+.gallery{
+    position: fixed;
+    transform: translate(0%, -175%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.gallery.show{
+  z-index:700;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gallery-img{
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 3px solid rgba(222, 60, 92,0.2);
+    transform: translateX(100px);
+    opacity: 0;
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease;
+}
+
+.gallery.show .gallery-img{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.gallery.show .gallery-img:nth-child(1){
+    transition-delay: 0s;
+}
+
+.gallery.show .gallery-img:nth-child(2){
+    transition-delay: 0.15s;
+}
+
+.gallery.show .gallery-img:nth-child(3){
+    transition-delay: 0.3s;
+}
+
+
+.name-signs{
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 96px;
+    pointer-events: none;
+}
+
+.sign{
+    position: absolute;
+    width: 100%;
+}
+
+.up-sign{
+    animation: floatUp 3s ease-in-out infinite;
+}
+
+.down-sign{
+    animation: floatDown 3s ease-in-out infinite;
+}
+@keyframes floatUp{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes floatDown{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+.hero {
+  z-index:-999;
+  position:fixed;
+  pointer-events: none;
+  height: 600px;
+  width: 450px;
+  background-image: url("https://i.postimg.cc/cLWBKtsd/Untitled464-20260525001718.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay-image {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: url("https://i.postimg.cc/y633X6df/Untitled464-20260524230417.png") center/contain no-repeat;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.spotify-card{
+    position: fixed;
+    left: -400px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 160px;
+    background: rgba(47, 79, 55, 0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(232, 132, 174,0.15);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 9px;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transition:
+        left 0.6s ease,
+        opacity 0.6s ease;
+    z-index: 999;
+}
+
+.spotify-card.show{
+    left: 150px;
+    opacity: 1;
+}
+
+.spotify-card img{
+    width: 80px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.spark-area{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.spark{
+    position: absolute;
+
+    bottom: -20px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    filter: blur(2px);
+
+    opacity: 0.7;
+
+    animation: driftGlow linear infinite;
+}
+
+/* different colours + positions */
+
+.s1{
+    left: 20%;
+    background: #ff69b4;
+    animation-duration: 7s;
+}
+
+.s2{
+    left: 35%;
+    background: #ffd6f5;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.s3{
+    left: 50%;
+    background: #ffb3ff;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+
+.s4{
+    left: 65%;
+    background: #ffc0cb;
+    animation-duration: 11s;
+}
+
+.s5{
+    left: 80%;
+    background: #ffe6fa;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+.s6{
+    left: 45%;
+    background: #ff8ad8;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+.s7{
+    left: 25%;
+    background: #ff69b4;
+    animation-duration: 6s;
+    animation-delay: 5s;
+}
+
+.s8{
+    left: 55%;
+    background: #ed8aa2;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+@keyframes driftGlow{
+
+    0%{
+        transform:
+          translateY(0px)
+          translateX(0px)
+          scale(0.6);
+
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 0.8;
+    }
+
+    50%{
+        transform:
+          translateY(-300px)
+          translateX(30px)
+          scale(1);
+    }
+
+    100%{
+        transform:
+          translateY(-700px)
+          translateX(-20px)
+          scale(0.4);
+
+        opacity: 0;
+    }
+}
