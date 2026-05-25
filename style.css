@@ -37,7 +37,7 @@
 
 .gallery{
     position: fixed;
-    transform: translate(0%, -175%);
+    transform: translate(0%, -200%);
     display: flex;
     gap: 20px;
     opacity: 0;
